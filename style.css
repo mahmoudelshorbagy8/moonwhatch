@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --color: #CD346C;
+  --maincolor: #CD34C0;
+  --box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+.contanier{
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.btn{
+  text-decoration: none;
+  width: 130px;
+  display: block;
+  background: var(--color);
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  transition: all ease-in 0.5s;
+}
+.btn:hover{
+  letter-spacing: 2px;
+  background: var(--maincolor);
+}
+/*  section header start  */
+header{
+  display: flex;
+  align-items: center;
+  padding: 12px 7%;
+  background: #333;
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+header .Logo{
+  height: 20px;
+  margin-right: auto;
+}
+header .navbar a{
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: 20px;
+  color: #fff;
+  transition: 0.5s;
+}
+header .navbar a:hover{
+  color: var(--color);
+}
+header .bar{
+  display: flex;
+  align-items: center;
+}
+header .bar i{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 15px;
+  margin: 7px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+header .bar i:hover{
+  color: var(--color);
+}
+header .bar #meunbar{
+  display: none;
+}
+header form{
+  position: absolute;
+  background: #fff;
+  top: 110%;
+  right: 7%;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 600px;
+  display: none;
+}
+header form.active{
+  display: block;
+}
+header form #searchbox{
+  background: none;
+  outline: none;
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  color: var(--color);
+  height: 100%;
+}
+.active{
+  transition: 0.5s;
+}
+/*  section header end  */
+
+/*  section home start  */
+.home{
+  min-height: 100vh;
+  background: url(Bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+   padding: 0 9%;
+   padding-top: 70px;
+   padding-bottom: 20px;
+   position: relative
+}
+
+.land{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.col h5{
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 13px;
+  text-transform: uppercase;
+}
+.col h1{
+  font-size: 60px;
+  letter-spacing: 1px;
+  color: #eee;
+  text-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+.col p{
+  color: #ededed;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.imges{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.imges span{
+  font-size: 10px;
+  color: #666;
+}
+.imges p{
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.imges img{
+  width: 40vw;
+}
+.box{
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box .contanier-box{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.box .contanier-box .info h3{
+  color: #fff;
+  font-size: 15px;
+}
+.box .contanier-box .info span{
+  color: #eee;
+  font-size: 10px;
+  margin-right: 30px;
+}
+.box img{
+  width: 50px;
+}
+
+/*  section home end  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media*/
+@media (max-width: 991px){
+  htm{
+    font-size: 55%;
+  }
+  header{
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px){
+   header .bar #meunbar{
+    display: block;
+  }
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    border-top: 0.5px solid var(--color);
+    border-bottom: 0.5px solid var(--color);
+    background: #fff;
+    display: none;
+  }
+  header .navbar.active{
+    display: block;
+    
+  }
+  header .navbar a{
+    padding: 15px;
+    margin: 15px;
+    display: block;
+    background: #ededed;
+    color: #333;
+  }
+  header form{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+  .col h1{
+    font-size: 40px;
+  }
+  .land{
+    flex-flow: column-reverse;
+  }
+  .land .imges img{
+    width: 100%;
+  }
+}
